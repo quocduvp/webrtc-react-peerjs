@@ -2,8 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import peerjs from 'peerjs'
 import * as serviceWorker from './serviceWorker';
-
+export const peer = new peerjs({
+    host: "peer-server-dskmuebwip.now.sh",
+    port: 443,
+    secure: true,
+    key:"peerjs",
+    path: "/"
+})
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
